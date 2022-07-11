@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
+    <audio id="audio-lebox" src="lebox.mp3"></audio>
     <!-- ======== GAME WRAPPER -->
     <div id="wrapper">
         <div class="game-judul">
@@ -50,19 +51,12 @@
             <span><button class="button" id="StartButton">Mulai</button></span>
             <span><button class="button" id="StopButton">Stop</button></span>
             <span><button class="button" id="ResumeButton">Resume</button></span>
-            <span><button class="button" id="intruksi">Intruksi</button></span>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/SimpelFramerowk.js?v=3"></script>
     <script src="js/Game.js?v=1"></script>
     <script>
-        _ifsu("#intruksi").di("click",function(){
-            const game_screen = _ifsu(".game-screen")._elemen;
-            game_screen.classList.toggle("show");
-            const game = _ifsu(".game")._elemen;
-            game.classList.toggle("none")
-        });
 
     </script>
 </body>

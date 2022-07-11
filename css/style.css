@@ -30,7 +30,7 @@ header#game-meta{
     padding:10px;
     box-sizing: border-box;
     height:600px;
-    display:none;
+    display:block;
     width:960px;
 }
 .game-screen.show{
@@ -41,6 +41,9 @@ header#game-meta{
     align-items: center;
     flex-direction:column;
     justify-content: center;
+}
+.game{
+    display: none;
 }
 .game.none{
     display: none;
