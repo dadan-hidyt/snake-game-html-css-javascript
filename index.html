@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Ular By dadan</title>
+    <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body>
+    <!-- ======== GAME WRAPPER -->
+    <div id="wrapper">
+        <div class="game-judul">
+            <h1>Uler-Uleran</h1>
+        </div>
+        <header id="game-meta">
+            <span id="score">Score: <span id="countScore">0</span><br><span id="score">Hight Score: <span id="nama">0</span> (<span id="hight"></span>)</span>
+        </span>
+            <span id="time">Time: <span id="countTime">0</span></span>
+        </header>
+        <main id="game">
+            <div class="game-screen">
+                <div id="welcome">
+                    <h1>Intruksi</h1>
+                    <br>
+                    <div class="cara-main">
+                        <ol>
+                            <li>Klik button <b>Mulai</b></li>
+                            <li>Gerakan ular dengan 
+                                <ul>
+                                    <li>W untuk atas</li>
+                                    <li>S untuk bawah</li>
+                                    <li>D untuk kanan</li>
+                                    <li>A untuk kiri</li>
+                                </ul>
+                            </li>
+                            <li>Jika ingin menyetop game sementara klik  tombol <b>Stop</b> dan jika ingin mulai lagi klik tombol <b>Resume</b></li>
+                            <li>Jika kamu melebihi batas screen akan game over</li>
+                            <li>Jika kamu mengigit bagian tubuh akan game over</li>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="game">
+                <canvas id="canvas" width="960" height="600"></canvas>
+            </div>
+        </main>
+        <footer>
+            <span><button class="button" id="StartButton">Mulai</button></span>
+            <span><button class="button" id="StopButton">Stop</button></span>
+            <span><button class="button" id="ResumeButton">Resume</button></span>
+            <span><button class="button" id="intruksi">Intruksi</button></span>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/SimpelFramerowk.js?v=3"></script>
+    <script src="js/Game.js?v=1"></script>
+    <script>
+        _ifsu("#intruksi").di("click",function(){
+            const game_screen = _ifsu(".game-screen")._elemen;
+            game_screen.classList.toggle("show");
+            const game = _ifsu(".game")._elemen;
+            game.classList.toggle("none")
+        });
+
+    </script>
+</body>
+</html>
